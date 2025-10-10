@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
 /* Reset some defaults */
 * {
   margin: 0;
@@ -6,7 +8,7 @@
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: 'Oswald', system-ui, sans-serif;
   line-height: 1.6;
   color: #333;
 }
@@ -19,17 +21,33 @@ body {
 
 /* Header */
 header {
-  background: #222;
-  color: #fff;
-  padding: 1rem 0;
+  background: #4B0082;
+  color: #F9F9F9;
+  padding: 2.5rem 0 1rem 0;
+  min-height: 90px;
+  position: relative;
+  font-family: 'Oswald', system-ui, sans-serif;
 }
 
 .logo {
   float: left;
+  font-size: 2.1rem;
+  font-weight: bold;
+  line-height: 1.2;
+  max-width: 70vw;
+  white-space: normal;
+  word-break: break-word;
 }
 
 nav {
   float: right;
+}
+
+/* Clear floats after header container */
+header .container::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .nav-links {
