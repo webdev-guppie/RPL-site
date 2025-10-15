@@ -9,6 +9,7 @@
 <body>
   <header>
     <div class="container">
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">☰</button>
   <h1 class="logo">
     <a href="index.html" class="logo-link">
       <img src="images/rpl-logo.png" alt="Renewed Purpose Living LLC" class="logo-img" />
@@ -16,20 +17,27 @@
     </a>
   </h1>
       <nav>
-        <ul class="nav-links">
+        <ul id="mobile-nav" class="nav-links" role="menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+    <div id="mobile-nav-panel" class="mobile-nav" aria-hidden="true">
+      <ul class="nav-links" role="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero hero--full hero--home">
     <div class="container">
-  <h2>Welcome to Renewed Purpose Living LLC</h2>
-  <a href="contact.html" class="btn">Learn More</a>
+      <!-- Hero image only on homepage (no heading or CTA) -->
     </div>
   </section>
 
@@ -60,5 +68,6 @@
   <p>&copy; 2025 Renewed Purpose Living LLC | All Rights Reserved</p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

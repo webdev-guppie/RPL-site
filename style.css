@@ -117,6 +117,64 @@ header .container::after {
   text-align: center;
 }
 
+/* Homepage - show full hero image with no overlay padding */
+.hero--full {
+  padding: 0;
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Homepage specific background (moved from inline) */
+.hero--home {
+  background-image: url('images/hero-image.jpg');
+}
+
+/* Navigation hamburger */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.nav-toggle:focus {
+  outline: 2px solid #fff;
+}
+
+/* Mobile nav hidden by default */
+.nav-links {
+  list-style: none;
+}
+.nav-links.collapsed {
+  display: none;
+}
+
+/* Slide-in mobile menu */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -320px; /* hidden by default */
+  width: 280px;
+  height: 100%;
+  background: #4B0082;
+  color: #fff;
+  padding: 2rem 1rem;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+  transition: right 300ms ease;
+  z-index: 1000;
+}
+.mobile-nav.open {
+  right: 0;
+}
+.mobile-nav .nav-links {
+  display: block;
+}
+.mobile-nav .nav-links li {
+  margin: 1rem 0;
+}
+
 /* Make primary h2 headings match brand color */
 h2 {
   color: #4b0082;
@@ -169,6 +227,25 @@ footer {
   .logo, nav {
     float: none;
     text-align: center;
+  }
+
+
+  .nav-toggle {
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: 1.1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* keep existing layout but hide top-bar nav on mobile; mobile-nav will be used */
+  .nav-links.collapsed {
+    display: block;
+    background: transparent;
+    margin-top: 0.75rem;
   }
 
   .nav-links li {
